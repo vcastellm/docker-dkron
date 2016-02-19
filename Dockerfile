@@ -1,7 +1,7 @@
 FROM alpine
 MAINTAINER Victor Castell <victor@victorcastell.com>
 
-ENV DKRON_VERSION 0.6.3
+ENV DKRON_VERSION 0.6.4
 
 RUN set -x \
 	&& buildDeps='bash ca-certificates openssl' \
