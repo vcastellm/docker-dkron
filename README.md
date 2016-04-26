@@ -13,7 +13,7 @@ More info http://dkron.io
 
 start a Dkron instance
 
-    $ docker run --name some-dkron -d dkron/dkron -server
+    $ docker run --name some-dkron -d dkron/dkron agent -server
 
 This image includes EXPOSE 8080 8946, so standard container linking will make it automatically available to the linked containers (as the following examples illustrate).
 
