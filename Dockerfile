@@ -1,14 +1,14 @@
 FROM alpine
 MAINTAINER Victor Castell <victor@victorcastell.com>
 
-ENV DKRON_VERSION v0.9.3-b3
+ENV DKRON_VERSION 0.9.3-b3
 
 RUN set -x \
 	&& buildDeps='bash ca-certificates openssl' \
 	&& apk add --update $buildDeps \
 	&& rm -rf /var/cache/apk/* \
 	&& mkdir -p /opt/local/dkron \
-	&& wget -O dkron.tar.gz https://github.com/victorcoder/dkron/releases/download/${DKRON_VERSION}/dkron_${DKRON_VERSION}_linux_amd64.tar.gz \
+	&& wget -O dkron.tar.gz https://github.com/victorcoder/dkron/releases/download/v${DKRON_VERSION}/dkron_${DKRON_VERSION}_linux_amd64.tar.gz \
 	&& tar -xzf dkron.tar.gz \
 	&& mv dkron_${DKRON_VERSION}_linux_amd64/* /opt/local/dkron \
 	&& rm dkron.tar.gz \
