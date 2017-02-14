@@ -2,7 +2,7 @@ FROM alpine
 MAINTAINER Victor Castell <victor@victorcastell.com>
 
 ENV DKRON_VERSION 0.9.3-b4
-
+ 
 RUN set -x \
 	&& buildDeps='bash ca-certificates openssl' \
 	&& apk add --update $buildDeps \
