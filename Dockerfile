@@ -8,11 +8,10 @@ RUN set -x \
 	&& apk add --update $buildDeps \
 	&& rm -rf /var/cache/apk/* \
 	&& mkdir -p /opt/local/dkron \
-	&& wget -O dkron.tar.gz https://github.com/victorcoder/dkron/releases/download/v${DKRON_VERSION}/dkron_${DKRON_VERSION}_linux_amd64.tar.gz \
+	&& wget -O /opt/local/dkron/dkron.tar.gz https://github.com/victorcoder/dkron/releases/download/v${DKRON_VERSION}/dkron_${DKRON_VERSION}_linux_amd64.tar.gz \
+	&& cd /opt/local/dkron \
 	&& tar -xzf dkron.tar.gz \
-	&& mv dkron_${DKRON_VERSION}_linux_amd64/* /opt/local/dkron \
-	&& rm dkron.tar.gz \
-	&& rm -rf dkron_${DKRON_VERSION}_linux_amd64
+	&& rm /opt/local/dkron/dkron.tar.gz
 
 EXPOSE 8080 8946
 
