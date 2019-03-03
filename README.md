@@ -1,5 +1,7 @@
 # Official Dkron docker image
 
+NOTE: This repo is no longer needed, image is now managed from the main repo.
+
 ## Supported tags and respective Dockerfile links
 - latest [Dockerfile](https://github.com/victorcoder/docker-dkron/blob/master/Dockerfile)
 
